@@ -1,6 +1,6 @@
 
 // basic conditions
-const NUM_SPHERE = 10000;
+const NUM_SPHERE = 1000;
 
 // physical constants
 const G   = 9.8;    // gravitational acceleration

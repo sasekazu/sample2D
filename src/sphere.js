@@ -130,11 +130,12 @@ Sphere.prototype.updateSphere = function(dt, numSphere){
 
 Sphere.prototype.calcForce = function()
 {
+
     var start = new Date();
     for(var idSphere1 = 0; idSphere1 < this.numSphere; idSphere1++){
         this.collisionFlag[idSphere1] = false;
-        this.force[idSphere1].x       = +0.0;
-        this.force[idSphere1].y       = -G*this.mass[idSphere1];
+        this.force[idSphere1].x       = -G*this.mass[idSphere1]*gravity.x;
+        this.force[idSphere1].y       = -G*this.mass[idSphere1]*gravity.y;
 
         for(var idSphere2 = 0; idSphere2 < this.numSphere; idSphere2++){
             if(idSphere1 == idSphere2) continue;
@@ -182,8 +183,8 @@ Sphere.prototype.calcForceUsingMapping = function()
         var hash_x = hash - hash_y*this.numBox.x;
 
         this.collisionFlag[idSphere1] = false;
-        this.force[idSphere1].x       = +0.0;
-        this.force[idSphere1].y       = -G*this.mass[idSphere1];
+        this.force[idSphere1].x       = -G*this.mass[idSphere1]*gravity.x;
+        this.force[idSphere1].y       = -G*this.mass[idSphere1]*gravity.y;
         
         for(var j = -1; j <=1; j++){
             var idBox_y = hash_y + j;

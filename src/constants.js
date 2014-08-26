@@ -1,6 +1,6 @@
 
 // basic conditions
-const NUM_SPHERE = 1000;
+const NUM_SPHERE = 500;
 
 // physical constants
 const G   = 9.8;    // gravitational acceleration
@@ -30,3 +30,5 @@ const EPSILON = 0.10;   // reflection coefficient
 
 // constants for simulations
 const DT = 0.04;
+
+var colorArray = ['blue','darkslateblue','mediumslateblue','darkblue','darkcyan'];

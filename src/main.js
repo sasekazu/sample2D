@@ -95,22 +95,26 @@ function canvasRender() {
 }
 
 function mainloop() {
-	for(var i = 0; i < 5; ++i) {
-		context.clearRect(0,0,canvas.width(),canvas.height());
-		sphere.calcForceUsingMapping();
-		sphere.calcVelocity();
-		sphere.updateSphere(DT, NUM_SPHERE);
-		sphere.mapping();
-	}
+    for(var i = 0; i < 5; ++i) {
+        context.clearRect(0,0,canvas.width(),canvas.height());
+        sphere.calcForceUsingMapping();
+        sphere.calcVelocity();
+        sphere.updateSphere(DT, NUM_SPHERE);
+        sphere.mapping();
+    }
     
-	var r=1;
+    var r=1;
+    context.fillStyle = 'blue';
+    context.storokeStyle = 'black';
     for(var idSphere = 0; idSphere < NUM_SPHERE; idSphere++) {
-		/*
+        context.fillStyle = colorArray[idSphere%colorArray.length];
+        /*
         context.beginPath();
-        context.arc(sphere.position[idSphere].x+LX, sphere.position[idSphere].y, 1, 0, 2*Math.PI, true);
+        context.arc(scale*(sphere.position[idSphere].x+LX), scale*(sphere.position[idSphere].y+LY), scale*r, 0, 2*Math.PI, true);
         context.fill();
-		*/
-		context.fillRect(scale*(sphere.position[idSphere].x+LX-r), scale*(sphere.position[idSphere].y+LY-r), scale*2*r, scale*2*r);
+        */
+        context.fillRect(scale*(sphere.position[idSphere].x+LX-r), scale*(sphere.position[idSphere].y+LY-r), scale*2*r, scale*2*r);
+        //context.rect(scale*(sphere.position[idSphere].x+LX-r), scale*(sphere.position[idSphere].y+LY-r), scale*2*r, scale*2*r);
     }
     setTimeout(mainloop, 20);
 }

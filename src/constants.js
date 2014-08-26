@@ -7,15 +7,16 @@ const G   = 9.8;    // gravitational acceleration
 const RHO = 1.0;    // density 
 
 // constants for domain size
-const LX                =  220.0;
-const LY                =  150.0;
+const LX                =  80.0;	// x = [-LX:LX]に分布する
+const LY                =  60.0;
 const LZ                =    5.0;
-const PARTICLE_RANGE_X  =  150.0; 
-const PARTICLE_RANGE_Y  =  150.0; 
+const PARTICLE_RANGE_X  =  50.0; 
+const PARTICLE_RANGE_Y  =  50.0; 
 const PARTICLE_RANGE_Z  =    0.0; 
-const PARTICLE_OFFSET_X =  -70.0;
+const PARTICLE_OFFSET_X =    0.0;
 const PARTICLE_OFFSET_Y =    0.0;
 const PARTICLE_OFFSET_Z =    0.0;
+const scale=5;		// 描画をscale倍スケールで行う canvas.width=scale*2*LXとなるようにする
 
 // constants for mapping
 const BOXSIZE = 2.0;

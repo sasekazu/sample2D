@@ -2,8 +2,11 @@
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">        <title>2D-DEM simulation</title>
-        <style>canvas { width: 100%; height: 100% }</style>
+        <meta charset="utf-8">        
+        <title>2D-DEM simulation</title>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="js/jquery-1.11.1.min.js"></script>
         <script src="js/three.min.js"></script>
         <script src="src/vector.js"></script>
         <script src="src/events.js"></script>
@@ -13,6 +16,6 @@
         <script src="src/constants.js"></script>
     </head>
     <body>
-        <script>render();</script>
+       <canvas id="myCanvas" width="800" height="600"></canvas> 
     </body>
 </html>

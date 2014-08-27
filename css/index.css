@@ -1,7 +1,6 @@
 ﻿canvas{
 	background-color: lightgray;
 	display: block;
-	border: solid black 1px;
 	padding: 0 0;
-	margin: auto auto;
+	margin: 0 0;
 }

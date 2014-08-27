@@ -73,11 +73,26 @@ function helperConf(){
 
 
 $(document).ready(function () {
-    // three.js‚ğg‚¤‚Æ‚«‚Íindex.html‚Ìcanvasƒ^ƒO‚ğÁ‚·
+    // three.jsã‚’ä½¿ã†ã¨ãã¯index.htmlã®canvasã‚¿ã‚°ã‚’æ¶ˆã™
     //render();
 
     canvasRender();
 });
+
+
+function resizeCanvas(){
+    // -2 ã¯1pxãƒœãƒ¼ãƒ€ãƒ¼ã®åˆ†
+    canvas.attr("width",  document.documentElement.clientWidth);
+    canvas.attr("height", document.documentElement.clientHeight);
+    canvasWidth = canvas.width();
+    canvasHeight = canvas.height();
+    LX = canvas.width()*0.5/scale;
+    LY = canvas.height()*0.5/scale;
+
+	PARTICLE_RANGE_X = LX;
+	PARTICLE_RANGE_Y = LY;
+
+};
 
 
 function canvasRender() {
@@ -86,6 +101,10 @@ function canvasRender() {
     context = canvas.get(0).getContext("2d");
     canvasWidth = canvas.width();
     canvasHeight = canvas.height();
+
+    $(window).resize(resizeCanvas);
+    resizeCanvas();	
+
 
 
     var sphereThree = [];

@@ -1,22 +1,22 @@
 
 // basic conditions
-const NUM_SPHERE = 500;
+const NUM_SPHERE = 300;
 
 // physical constants
 const G   = 9.8;    // gravitational acceleration
 const RHO = 1.0;    // density 
 
 // constants for domain size
-const LX                =  80.0;	// x = [-LX:LX]Ç…ï™ïzÇ∑ÇÈ
-const LY                =  60.0;
-const LZ                =    5.0;
-const PARTICLE_RANGE_X  =  50.0; 
-const PARTICLE_RANGE_Y  =  50.0; 
-const PARTICLE_RANGE_Z  =    0.0; 
+var LX                =  80.0;	// x = [-LX:LX]„Å´ÂàÜÂ∏É„Åô„Çã
+var LY                =  60.0;
+var LZ                =    5.0;
+var PARTICLE_RANGE_X  =  50.0; 
+var PARTICLE_RANGE_Y  =  50.0; 
+var PARTICLE_RANGE_Z  =    0.0; 
 const PARTICLE_OFFSET_X =    0.0;
 const PARTICLE_OFFSET_Y =    0.0;
 const PARTICLE_OFFSET_Z =    0.0;
-const scale=5;		// ï`âÊÇscaleî{ÉXÉPÅ[ÉãÇ≈çsÇ§ canvas.width=scale*2*LXÇ∆Ç»ÇÈÇÊÇ§Ç…Ç∑ÇÈ
+const scale=20;		// ÊèèÁîª„ÇíscaleÂÄç„Çπ„Ç±„Éº„É´„ÅßË°å„ÅÜ canvas.width=scale*2*LX„Å®„Å™„Çã„Çà„ÅÜ„Å´„Åô„Çã
 
 // constants for mapping
 const BOXSIZE = 2.0;

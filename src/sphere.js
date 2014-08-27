@@ -63,6 +63,7 @@ Sphere.prototype.initialRandom = function(){
         this.radius.push(1.0);
 
         this.mass.push(4.0/3.0*Math.PI*Math.pow(this.radius[idSphere], 3)*RHO);
+		var cnt=0;
         do{
             var flag = 0;
             var tx = rangeRand(-range_x + offset_x, range_x + offset_x);
@@ -76,6 +77,10 @@ Sphere.prototype.initialRandom = function(){
                 if (Math.sqrt(rx*rx + ry*ry) < 2.0*1.05) flag = 1;
 //                if (Math.sqrt(rx*rx + ry*ry) < (this.radius[idSphere] + this.radius[idSphere2])*1.05) flag = 1;
             }
+            if(cnt > 100) {
+				alert("申し訳ありません．固定枠版をお試しください．error at Shpere.initialRandom");
+            }
+			++cnt;
         } while (flag != 0);
 
         this.position[idSphere].x = tx;
